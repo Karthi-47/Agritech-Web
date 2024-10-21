@@ -1,0 +1,370 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .navbar{
+            background-color: teal;
+            color: #fff;
+            padding: 15px;
+            height: 60px;
+            position: sticky;
+            top: 0;
+        }
+        .navbar h1{
+            color: white;
+            float: left;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        .navbar h2{
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            padding-left: 42%;
+        }
+        .farming h1{
+            text-align: center;
+            font-size: 40px;
+            font-weight: bold;
+            color: #228B22;
+            padding-top: 10px;
+        }
+       
+        .transport h1{
+            text-align: center;
+            font-size: 40px;
+            font-weight: bold;
+            color: #228B22;
+            padding-top: 10px;
+        }
+        
+        .harvest h1{
+            text-align: center;
+            font-size: 40px;
+            font-weight: bold;
+            color: #228B22;
+            padding-top: 10px;
+        }
+       
+      
+        .storage h1{
+            text-align: center;
+            font-size: 40px;
+            font-weight: bold;
+            color: #228B22;
+            padding-top: 10px;
+        }
+        .workers h1{
+            text-align: center;
+            font-size: 40px;
+            font-weight: bold;
+            color: #228B22;
+            padding-top: 10px;
+        }
+     
+        .farming p{
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: #49c5b6;
+            padding-top: 10px;
+        }
+        .transport p{
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: #49c5b6;
+            padding-top: 10px;
+        }
+        .harvest p{
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: #49c5b6;
+            padding-top: 10px;
+        }
+        .storage p{
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: #49c5b6;
+            padding-top: 10px;
+        }
+        .workers p{
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: #49c5b6;
+            padding-top: 10px;
+        }
+        .navbar ul{
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+        }
+        .navbar ul li{
+            padding: 5px;
+            margin-left: 30px;
+        }
+        .navbar ul li a{
+            font-weight: bold;
+            font-size: 20px;
+            color: #fff;
+            text-decoration: none;
+        }
+        .navbar ul li a:hover{
+            color: lightgreen;
+        }
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            width: 300px;
+            text-align: center;
+            font-family: arial;
+        }
+
+        .price {
+            color: grey;
+            font-size: 22px;
+        }
+
+        .card button {
+            border: none;
+            outline: 0;
+            padding: 12px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+        }
+        .farm-item .card img{
+            height: 260px;
+        }
+
+        .card button:hover {
+            font-weight: bold;
+            background-color: lightgreen;
+            color: black;
+            font-size: 19px;
+            transition: 0.4s all ease-in-out;
+        }
+        .farm-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 85px;
+            margin-right: 85px;
+        }
+        .farm-item .card{
+            margin: 18px;
+        }
+        .farm-item .card h1{
+            font-size: 20px;
+        }
+        .farm-item .card img {
+            width: 300px;
+            height: 300px;
+            overflow: hidden;
+            margin: 0 auto;
+            border-radius: 6px;
+        }
+        .farm-item .card p{
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <nav>
+            <h1><span style="color: lightgreen;">AGRI</span>&nbsp;&nbsp;TECH</h1>
+            <ul>
+                <li><a href="home_page.php">Home</a></li>
+                <li><a href="#fruit">Fruits</a></li>
+                <li><a href="#vegetable">Vegetables</a></li>
+                <li><a href="#seed">Seeds</a></li>
+                <li><a href="#fertilizer">Farm Equipments</a></li>
+                <li><a href="#equipments">Fertilizers</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="farming" id="fruit">
+        <h1>Natural Fruits</h1>
+        <p style="text-align: center; padding-left: 200px; padding-right: 200px; font-size: 25px; padding-bottom: 25px;">"Agriculture is our wisest pursuit, because it will in the end contribute most to real wealth, good morals & happiness.","A good farmer is nothing more nor less than a handy man with a sense of humus."</p>
+        <div class="farm-item">
+            <div class="card">
+                <img src="./Pro-Img/apple.jpg" alt="No-Image">
+                <h1>Apple</h1>
+                <p class="price"><span>&#8377;</span>68 <span>Per KG</span></p>
+                <p>For Sale</p>
+                <p><button onclick="location.href='ord_details.php'">Buy Now</button></p>
+            </div> 
+            <div class="card">
+                <img src="./Pro-Img/orange1.jpg" alt="No-Image">
+                <h1>Orange</h1>
+                <p class="price"><span>&#8377;</span>56 <span>Per KG</span></p>
+                <p>For Sale</p>
+                <p><button onclick="location.href='ord_details.php'">Buy Now</button></p>
+            </div> 
+            <div class="card">
+                <img src="./Pro-Img/banana.jpg" alt="No-Image">
+                <h1>Banana</h1>
+                <p class="price"><span>&#8377;</span>65 <span>Per Dozen</span></p>
+                <p>For sale</p>
+                <p><button onclick="location.href='ord_details.php'">Buy Now</button></p>
+            </div> 
+            <div class="card">
+                <img src="./Pro-Img/mango1.jpg" alt="No-Image">
+                <h1>Mango</h1>
+                <p class="price"><span>&#8377;</span>98 <span>Per KG</span></p>
+                <p>For Sale</p>
+                <p><button onclick="location.href='ord_details.php'">Buy Now</button></p>
+            </div>
+        </div> 
+    </div>
+    <div class="transport" id="vegetable">
+        <h1>Natural Vegetables</h1>
+        <p style="text-align: center; padding-left: 200px; padding-right: 200px; font-size: 25px; padding-bottom: 25px;">“Some beautiful paths can't be discovered without getting lost.” “You can't understand a city without using its public transportation system.”</p>
+        <div class="farm-item">
+            <div class="card">
+                <img src="./Pro-Img/carrot.jpg" alt="No-Image">
+                <h1>Carrot</h1>
+                <p class="price"><span>&#8377;</span>45 <span>Per KG</span></p>
+                <p>For Sale</p>
+                <p><button onclick="location.href='ord_details.php'">Buy Now</button></p>
+            </div> 
+            <div class="card">
+                <img src="./Pro-Img/cucumber.jpg" alt="No-Image">
+                <h1>Cucumber</h1>
+                 <p class="price"><span>&#8377;</span>29 <span>Per KG</span></p>
+                <p>For Sale</p>
+                <p><button onclick="location.href='ord_details.php'">Buy Now</button></p>
+            </div> 
+            <div class="card">
+                <img src="./Pro-Img/beet.jpg" alt="No-Image">
+                <h1>Beet Root</h1>
+                 <p class="price"><span>&#8377;</span>23 <span>Per KG</span></p>
+                <p>For Sale</p>
+                <p><button onclick="location.href='ord_details.php'">Buy Now</button></p>
+            </div> 
+            <div class="card">
+                <img src="./Pro-Img/corn.jpg" alt="No-Image">
+                <h1>Corn</h1>
+                <p class="price"><span>&#8377;</span>58 <span>Per KG</span></p>
+                <p>For Sale</p>
+                <p><button onclick="location.href='ord_details.php'">Buy Now</button></p>
+            </div>
+        </div>
+    </div>
+    <div class="harvest" id="seed">
+        <h1>Natural Farming Seeds</h1>
+        <p style="text-align: center; padding-left: 200px; padding-right: 200px; font-size: 25px; padding-bottom: 25px;">"Those too lazy to plow in the right season will have no food at the harvest." "Even if a farmer intends to loaf, he gets up in time to get an early start."</p>
+        <div class="farm-item">
+            <div class="card">
+                <img src="./Pro-Img/aseed.jpg" alt="No-Image">
+                <h1>Apple Seed</h1>
+                <p class="price"><span>&#8377;</span>47 <span>Per Pack(50g)</span></p>
+                <p>For Sale</p>
+                <p><button onclick="location.href='ord_details.php'">Buy Now</button></p>
+            </div> 
+            <div class="card">
+                <img src="./Pro-Img/cseed.jpg" alt="No-Image">
+                <h1>Corn seed</h1>
+                <p class="price"><span>&#8377;</span>69 <span>Per Pack(50g)</span></p>
+                <p>For Sale</p>
+                <p><button onclick="location.href='ord_details.php'">Buy Now</button></p>
+            </div> 
+            <div class="card">
+                <img src="./Pro-Img/pseed.jpg" alt="No-Image">
+                <h1>Pumpkin Seed</h1>
+                <p class="price"><span>&#8377;</span>119 <span>Per Pack(150g)</span></p>
+                <p>For Sale</p>
+                <p><button onclick="location.href='ord_details.php'">Buy Now</button></p>
+            </div> 
+            <div class="card">
+                <img src="./Pro-Img/rice.jpg" alt="No-Image">
+                <h1>Rice Seed</h1>
+                 <p class="price"><span>&#8377;</span>87 <span>Per Pack(1kg)</span></p>
+                <p>For Sale</p>
+                <p><button onclick="location.href='ord_details.php'">Buy Now</button></p>
+            </div>
+        </div>
+    </div>
+    <div class="storage" id="equipments">
+        <h1>Farming Equipments</h1>
+        <p style="text-align: center; padding-left: 200px; padding-right: 200px; font-size: 25px; padding-bottom: 25px;">In such an unstable market, storage bins offer farmers flexibility in regard to when and where their crop is marketed.</p>
+        <div class="farm-item">
+            <div class="card">
+                <img src="./Pro-Img/sick1.jpg" alt="No-Image">
+                <h1>Hand Sickle</h1>
+                <p class="price"><span>&#8377;</span>299</p> 
+                <p>For Sale</p>
+                <p><button onclick="location.href='ord_details.php'">Buy Now</button></p>
+            </div> 
+            <div class="card">
+                <img src="./Pro-Img/axe.jpg" alt="No-Image">
+                <h1>AXE</h1>
+                <p class="price"><span>&#8377;</span>599</p> 
+                <p>For Sale</p>
+                <p><button onclick="location.href='ord_details.php'">Buy Now</button></p>
+            </div> 
+            <div class="card">
+                <img src="./Pro-Img/hoe.jpg" alt="No-Image">
+                <h1>Hoe</h1>
+                  <p class="price"><span>&#8377;</span>499</p> 
+                <p>For Sale</p>
+                <p><button onclick="location.href='ord_details.php'">Buy Now</button></p>
+            </div> 
+            <div class="card">
+                <img src="./Pro-Img/tool.jpg" alt="No-Image">
+                <h1>Hand Tool</h1>
+                <p class="price"><span>&#8377;</span>799</p> 
+                <p>For Sale</p>
+                <p><button onclick="location.href='ord_details.php'">Buy Now</button></p>
+            </div>
+        </div> 
+              <div class="storage" id="fertilizer">
+        <h1>Organic Fertilizers</h1>
+        <p style="text-align: center; padding-left: 200px; padding-right: 200px; font-size: 25px; padding-bottom: 25px;">In such an unstable market, storage bins offer farmers flexibility in regard to when and where their crop is marketed.</p>
+        <div class="farm-item">
+            <div class="card">
+                <img src="./Pro-Img/cow.jpg" alt="No-Image">
+                <h1>Cow Dung</h1>
+                <p class="price"><span>&#8377;</span>589 <span>Per Pack(1.5kg)</span></p>
+                <p>For Sale</p>
+                <p><button onclick="location.href='ord_details.php'">Buy Now</button></p>
+            </div> 
+            <div class="card">
+                <img src="./Pro-Img/rich.jpg" alt="No-Image">
+                <h1>Human Rich</h1>
+                <p class="price"><span>&#8377;</span>699 <span>Per Pack(1.5kg)</span></p>
+                <p>For Sale</p>
+                <p><button onclick="location.href='ord_details.php'">Buy Now</button></p>
+            </div> 
+            <div class="card">
+                <img src="./Pro-Img/org.jpg" alt="No-Image">
+                <h1>organic Boost</h1>
+                <p class="price"><span>&#8377;</span>1187 <span>Per Pack(5kg)</span></p>
+                <p>For Sale</p>
+                <p><button onclick="location.href='ord_details.php'">Buy Now</button></p>
+            </div> 
+            <div class="card">
+                <img src="./Pro-Img/gro.jpg" alt="No-Image">
+                <h1>Gro Sure</h1>
+                <p class="price"><span>&#8377;</span>1399 <span>Per Pack(5kg)</span></p>
+                <p>For Sale</p>
+                <p><button onclick="location.href='ord_details.php'">Buy Now</button></p>
+            </div>
+        </div>
+    </div>    
+</body>
+</html>

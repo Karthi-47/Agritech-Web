@@ -1,0 +1,473 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+            @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,600;0,700;1,100&family=Roboto:wght@100;300;400;500;700&display=swap');
+        :root{
+            --headerclr:#222533;
+            --mainclr: green;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: .2s;
+            font-family: 'Roboto', sans-serif;
+            text-decoration: none;
+            text-transform: capitalize;
+        }
+        html{
+            font-size: 62.5%;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+        .navbar{
+            background-color: teal;
+            color: #fff;
+            padding: 15px;
+            height: 60px;
+            position:sticky;
+            top: 0;
+        }
+        .navbar ul{
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+        }
+        .navbar ul li{
+            padding: 5px;
+            margin-left: 30px;
+        }
+        .navbar ul li a{
+            font-weight: bold;
+            font-size: 20px;
+            color: #fff;
+            text-decoration: none;
+            text-align: center;
+        }
+        .navbar ul li a:hover{
+            color: lightgreen;
+        }
+        .navbar h1{
+            color: white;
+            float: left;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        .navbar h2{
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            padding-left: 42%;
+        }
+        .background-image{
+            background: url('./Img/farm1.jpg');
+            width: 100%;
+            height: 100vh;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
+        }
+        .inner-back-text{
+            position: absolute;
+            top: 25%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        .inner-back-text h1{
+            font-size: 50px;
+            color: goldenrod;
+            text-align: center;
+            line-height: 5rem;
+            font-weight: bolder;
+        }
+        .inner-back-text h1 span{
+            color: green;
+            font-weight: bolder;
+            text-transform: uppercase;
+        }
+        .inner-back-text p{
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            padding: 1rem;
+        }
+        .inner-back-btn{
+            display: flex;
+            justify-content: center;
+        }
+        .inner-back-btn a{
+            margin-right: 1rem;
+        }
+        .first-btn, .second-btn{
+            padding: 1.5rem 4rem;
+            background: var(--mainclr);
+            border-radius: 15px;
+            color: var(--headerclr);
+            font-size: 1.5rem;
+        }
+        .first-btn:hover, .second-btn:hover{
+            background: var(--headerclr);
+            color: white;
+            letter-spacing: 3px;
+        }
+        .welcome{
+            padding: 3rem 7%;
+        }
+        .main-welcome{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .inner-welcome{
+            flex: 1 1 45rem;
+        }
+        .welcome-text h1{
+            font-size: 40px;
+            color: var(--mainclr);
+        
+        }
+        .welcome-text p{
+            font-size: 1.5rem;
+            padding: 1rem 0;
+            margin-bottom: 25px;
+        }
+        .welcome-text a{
+            padding: 1.5rem 4rem;
+            background: var(--mainclr);
+            color: var(--headerclr);
+            font-size: 1.5rem;
+            border-radius: 15px;
+        }
+        .welcome-text a:hover{
+            background: var(--headerclr);
+            color: white;
+        }
+        .inner-welcome img{
+        width: 80%;
+        }
+        .chose-us{
+            padding: 5rem 7%;
+            background-color: rgb(112, 188, 188);
+        }
+        .chose-us h1{
+            color: var(--headerclr);
+            font-size: 40px;
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+        .chose-us h1 span{
+            color: var(--mainclr);
+        }
+        .chose-text{
+            color: var(--headerclr);
+            font-size: 1.5rem;
+            padding: 1rem 10rem;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        .main-chose{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+        .inner-chose{
+            flex: 1 1 200px;
+        }
+        .chose-icon{
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            border: 8px solid var(--mainclr);
+            border-radius: 100%;
+            margin: 0 auto;
+        }
+        .chose-icon i{
+            font-size: 40px;
+            color: white;
+            transition: .5s;
+        }
+        .chose-icon i:hover{
+        color: var(--headerclr);
+        transform: translateY(-25px);
+        }
+        .inner-chose h2{
+            font-size: 2rem;
+            padding: 1rem 0;
+        }
+        .inner-chose p{
+            font-size: 1.5rem;
+            padding: 0 1rem;
+        }
+        .our-services{
+            padding: 5rem 7%;
+        }
+        .our-services h1{
+            color: var(--headerclr);
+            font-size: 40px;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        .our-services h1 span{
+            color: var(--mainclr);
+        }
+        .main-service{
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .inner-service{
+            flex: 1 1 300px;
+        }
+        .inner-service h2{
+            padding: 1rem 0;
+            font-size: 2rem;
+        }
+        .inner-service p{
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+        }
+        .inner-service a{
+            padding: 1.5rem 3rem;
+            background: var(--mainclr);
+            color: var(--headerclr);
+            border-radius: 15px;
+        
+        }
+        .inner-service a:hover{
+            background: var(--headerclr);
+            color: white;
+        }
+        .our-gallery{
+            padding: 4rem 7%;
+        }
+        .our-gallery h1{
+            color: var(--headerclr);
+            font-size: 40px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .our-gallery h1 span{
+            color: var(--mainclr);
+        }
+        .main-gallery{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .inner-gallery{
+            flex: 1 1 300px;
+        }
+        .inner-gallery img{
+            width: 100%;
+            height: 300px;
+            transition: .5s;
+            border-radius: 30px;
+        }
+        .inner-gallery img:hover{
+            transform: translateY(-25px);
+        }
+        #profile{
+            font-size:20px;
+            font-weight:bolder;
+        }
+
+
+        @media (max-width:767px) {
+            html{
+                font-size: 55%;
+            }
+            #menu-bar{
+                display: initial;
+            }
+            .header{
+                padding: 2rem;
+            }
+            .nav{
+                position: absolute;
+                top: 100%;
+                width: 80%;
+                left: 10%;
+                top: -1000%;
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                border-radius: 15px;
+                transition: .5s;
+            }
+            .nav a{
+                color: black;
+                display: block;
+                margin: 1rem;
+                font-size: 14px;
+            }
+            .search-form{
+                width: 90%;
+            }
+            .inner-back-text{
+                width: 100% !important;
+            }
+            .inner-welcome img{
+                margin-top: 20px;
+                text-align: center;
+                }
+                .chose-text{
+                    padding: 1rem 2rem;
+                
+                }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <nav>
+            <h1><span style="color: lightgreen;">AGRI</span>&nbsp;&nbsp;TECH</h1>
+            <ul>
+                <li id="profile">Hi <?php echo $_SESSION['NAME']; ?></li>
+                <li><a href="vehicles.html">Vehicles Booking</a></li>
+                <li><a href="product.html">Products Booking</a></li>
+                <li><a href="logout.php">Logout</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="background-image">
+        <div class="inner-back-text">   
+            <h1>We Make our<br>
+              <span>AGRICULTURE WORLD</span></h1>
+            <p>
+                “If we grow more food, there will be enough food to feed everyone.”</p>
+                <div class="inner-back-btn">
+                   
+                </div>
+        </div>
+    </div>
+
+    <div class="welcome">
+        <div class="main-welcome">
+            <div class="inner-welcome">
+                <div class="welcome-text">
+                    <h1>Welcome To Our Wolrd</h1>
+                    <p>We are excited to welcome you to our team! Together, we will build great things,We are honored to have you join our team of Formers. Your passion for farming will be a great addition to our company.</p>
+                  
+                </div>
+            </div>
+            <div class="inner-welcome">
+                <img src="./Img/welcome.png" alt="No-Image">
+            </div>
+        </div>
+    </div>
+    
+    <div class="chose-us">
+        <h1>why <span>choose</span>  us</h1>
+        <p class="chose-text" style="color: white;">We are constantly evolving and staying up-to-date with the latest farming technologies and techniques. Our use of advanced tools and methods ensures that we can deliver the highest-quality work efficiently and effectively.</p>
+        <div class="main-chose">
+            <div class="inner-chose">
+                
+                <h2>Experience</h2>
+                <p style="color: white;"> "We have years of experience in the farming industry and have worked on a wide range of projects. Our team has the expertise to handle any project, big or small."</p>
+            </div>
+    
+            <div class="inner-chose">
+                
+                    <i class="fas fa-user"></i>
+              
+                <h2>Deliver time</h2>
+                <p style="color: white;">"We take great pride in the quality of our work and strive to exceed our clients' expectations. Our attention to detail and commitment to excellence set us apart."</p>
+            </div>
+    
+            <div class="inner-chose">
+                
+                    <i class="fas fa-user"></i>
+                
+                <h2>Lovable Clients</h2>
+                <p style="color: white;">"Our clients are at the heart of everything we do. We pride ourselves on providing exceptional customer service, always being responsive to our clients' needs and concerns."</p>
+            </div>
+    
+            <div class="inner-chose">
+                
+                    <i class="fas fa-user"></i>
+               
+                <h2>Unique Project</h2>
+                <p style="color: white;">We understand that every client and project is unique. That's why we take a personalized approach to every project, working closely with our clients to ensure their vision is realized."</p>
+            </div>
+    </div>
+    
+    
+    <!-- our services -->
+    
+    <div class="our-services">
+        <h1>our <span>services</span></h1>
+        <div class="main-service">
+            <div class="inner-service">
+                <img src="service (1).png" alt="">
+                <h2>Self-Confidence</h2>
+                <p>"Our reputation is built on quality workmanship, superior customer service, and a dedication to excellence in everything we do."</p>
+            
+            </div>
+    
+            <div class="inner-service">
+                <img src="service (2).png" alt="">
+                <h2>Creativity</h2>
+                <p>"Our team is passionate about what we do and dedicated to ensuring our clients are completely satisfied with our work."</p>
+                
+            </div>
+    
+            <div class="inner-service">
+                <img src="service (3).png" alt="">
+                <h2>Work better</h2>
+                <p>"We take pride in our work and strive to deliver the highest level of service, quality, and value to our clients."</p>
+            
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="our-gallery">
+        <h1>Made <span>made with</span> love</h1>
+        <div class="main-gallery">
+            <div class="inner-gallery">
+                <img src="./Img/image1.jpg" alt="">
+            </div>
+    
+            <div class="inner-gallery">
+                <img src="./Img/image4.jpg" alt="">
+            </div>
+    
+            <div class="inner-gallery">
+                <img src="./Img/image3.jpg" alt="">
+            </div>
+    
+            <div class="inner-gallery">
+                <img src="./Img/image2.jpg" alt="">
+            </div>
+    
+            <div class="inner-gallery">
+                <img src="./Img/image6.jpg" alt="">
+            </div>
+    
+            <div class="inner-gallery">
+                <img src="./Img/image7.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    
+
+</body>
+</html>

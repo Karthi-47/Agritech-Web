@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .navbar{
+            background-color: teal;
+            color: #fff;
+            padding: 15px;
+            height: 60px;
+            position: sticky;
+            top: 0;
+        }
+        .navbar h1{
+            color: white;
+            float: left;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        .navbar h2{
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            padding-left: 42%;
+        }
+        .farming h1{
+            text-align: center;
+            font-size: 40px;
+            font-weight: bold;
+            color: #228B22;
+            padding-top: 10px;
+        }
+       
+        .transport h1{
+            text-align: center;
+            font-size: 40px;
+            font-weight: bold;
+            color: #228B22;
+            padding-top: 10px;
+        }
+        
+        .harvest h1{
+            text-align: center;
+            font-size: 40px;
+            font-weight: bold;
+            color: #228B22;
+            padding-top: 10px;
+        }
+       
+      
+        .storage h1{
+            text-align: center;
+            font-size: 40px;
+            font-weight: bold;
+            color: #228B22;
+            padding-top: 10px;
+        }
+        .workers h1{
+            text-align: center;
+            font-size: 40px;
+            font-weight: bold;
+            color: #228B22;
+            padding-top: 10px;
+        }
+     
+        .farming p{
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: #49c5b6;
+            padding-top: 10px;
+        }
+        .transport p{
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: #49c5b6;
+            padding-top: 10px;
+        }
+        .harvest p{
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: #49c5b6;
+            padding-top: 10px;
+        }
+        .storage p{
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: #49c5b6;
+            padding-top: 10px;
+        }
+        .workers p{
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: #49c5b6;
+            padding-top: 10px;
+        }
+        .navbar ul{
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+        }
+        .navbar ul li{
+            padding: 5px;
+            margin-left: 30px;
+        }
+        .navbar ul li a{
+            font-weight: bold;
+            font-size: 20px;
+            color: #fff;
+            text-decoration: none;
+        }
+        .navbar ul li a:hover{
+            color: lightgreen;
+        }
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            width: 300px;
+            text-align: center;
+            font-family: arial;
+        }
+
+        .price {
+            color: grey;
+            font-size: 22px;
+        }
+
+        .card button {
+            border: none;
+            outline: 0;
+            padding: 12px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            font-size: 17px;
+        }
+        .farm-item .card img{
+            height: 260px;
+        }
+
+        .card button:hover {
+            font-weight: bold;
+            background-color: lightgreen;
+            color: black;
+            font-size: 19px;
+            transition: 0.4s all ease-in-out;
+        }
+        .farm-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 85px;
+            margin-right: 85px;
+        }
+        .farm-item .card{
+            margin: 18px;
+        }
+        .farm-item .card h1{
+            font-size: 20px;
+        }
+        .farm-item .card img {
+            width: 300px;
+            height: 300px;
+            overflow: hidden;
+            margin: 0 auto;
+            border-radius: 6px;
+        }
+        .farm-item .card p{
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <nav>
+            <h1><span style="color: lightgreen;">AGRI</span>&nbsp;&nbsp;TECH</h1>
+            <ul>
+                <li><a href="home_page.php">Home</a></li>
+                <li><a href="#farming">Farming</a></li>
+                <li><a href="#transport">Transportation</a></li>
+                <li><a href="#harvest">Harvesting</a></li>
+                <li><a href="#storage">Storage</a></li>
+                <li><a href="#workers">Workers</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="farming" id="farming">
+        <h1>Farming Vehicles for Rent</h1>
+        <p style="text-align: center; padding-left: 200px; padding-right: 200px; font-size: 25px; padding-bottom: 25px;">"Agriculture is our wisest pursuit, because it will in the end contribute most to real wealth, good morals & happiness.","A good farmer is nothing more nor less than a handy man with a sense of humus."</p>
+        <div class="farm-item">
+            <div class="card">
+                <img src="./Img/farming.jpg" alt="No-Image">
+                <h1>Vintage Method</h1>
+                <p class="price"><span>&#8377;</span>100 <span>Per Hour</span></p>
+                <p>For Rent</p>
+                <button onclick="location.href='ord_vehicle_details.php'">Book Now</button>
+            </div> 
+            <div class="card">
+                <img src="./Img/tractor.jpg" alt="No-Image">
+                <h1>Tractor</h1>
+                <p class="price"><span>&#8377;</span>350 <span>Per Hour</span></p>
+                <p>For Rent</p>
+                <button onclick="location.href='ord_vehicle_details.php'">Book Now</button>
+            </div> 
+            <div class="card">
+                <img src="./Img/jcb.jpg" alt="No-Image">
+                <h1>JCB</h1>
+                <p class="price"><span>&#8377;</span>450 <span>Per Hour</span></p>
+                <p>For Rent</p>
+                <button onclick="location.href='ord_vehicle_details.php'">Book Now</button>
+            </div> 
+            <div class="card">
+                <img src="./Img/sugarcane.png" alt="No-Image">
+                <h1>Sugarcane Harvester</h1>
+                <p class="price"><span>&#8377;</span>550 <span>Per Hour</span></p>
+                <p>For Rent</p>
+                <button onclick="location.href='ord_vehicle_details.php'">Book Now</button>
+            </div>
+        </div> 
+    </div>
+    <div class="transport" id="transport">
+        <h1>Transportation for Rent</h1>
+        <p style="text-align: center; padding-left: 200px; padding-right: 200px; font-size: 25px; padding-bottom: 25px;">“Some beautiful paths can't be discovered without getting lost.” “You can't understand a city without using its public transportation system.”</p>
+        <div class="farm-item">
+            <div class="card">
+                <img src="./Img/tractor-ts.jpg" alt="No-Image">
+                <h1>Tractor</h1>
+                <p class="price"><span>&#8377;</span>32 Per KM</p>
+                <p>For Rent</p>
+                <button onclick="location.href='ord_vehicle_details.php'">Book Now</button>
+            </div> 
+            <div class="card">
+                <img src="./Img/lorry-ts.png" alt="No-Image">
+                <h1>Truck</h1>
+                <p class="price"><span>&#8377;</span>40 Per KM</p>
+                <p>For Rent</p>
+                <button onclick="location.href='ord_vehicle_details.php'">Book Now</button>
+            </div> 
+            <div class="card">
+                <img src="./Img/ace-ts.jpg" alt="No-Image">
+                <h1>TATA Ace</h1>
+                <p class="price"><span>&#8377;</span>30 Per KM</p>
+                <p>For Rent</p>
+                <button onclick="location.href='ord_vehicle_details.php'">Book Now</button>
+            </div> 
+            <div class="card">
+                <img src="./Img/eicher-ts.jpg" alt="No-Image">
+                <h1>EICHER Truck</h1>
+                <p class="price"><span>&#8377;</span>42 Per KM</p>
+                <p>For Rent</p>
+                <button onclick="location.href='ord_vehicle_details.php'">Book Now</button>
+            </div>
+        </div>
+    </div>
+    <div class="harvest" id="harvest">
+        <h1>Harvesting Vehicles for Rent</h1>
+        <p style="text-align: center; padding-left: 200px; padding-right: 200px; font-size: 25px; padding-bottom: 25px;">"Those too lazy to plow in the right season will have no food at the harvest." "Even if a farmer intends to loaf, he gets up in time to get an early start."</p>
+        <div class="farm-item">
+            <div class="card">
+                <img src="./Img/sugarcane.png" alt="No-Image">
+                <h1>Sugarcane Harvester</h1>
+                <p class="price"><span>&#8377;</span>1200 <span>Per Hour</span></p>
+                <p>For Rent</p>
+                <button onclick="location.href='ord_vehicle_details.php'">Book Now</button>
+            </div> 
+            <div class="card">
+                <img src="./Img/rice.jpg" alt="No-Image">
+                <h1>Rice Harvester</h1>
+                <p class="price"><span>&#8377;</span>1500 <span>Per Hour</span></p>
+                <p>For Rent</p>
+                <button onclick="location.href='ord_vehicle_details.php'">Book Now</button>
+            </div> 
+            <div class="card">
+                <img src="./Img/Turmeric.jpeg" alt="No-Image">
+                <h1>Turmeric Harvester</h1>
+                <p class="price"><span>&#8377;</span>1000 <span>Per Hour</span></p>
+                <p>For Rent</p>
+                <button onclick="location.href='ord_vehicle_details.php'">Book Now</button>
+            </div> 
+            <div class="card">
+                <img src="./Img/groundnet.jpg" alt="No-Image">
+                <h1>Groundnut Digger Harvester</h1>
+                <p class="price"><span>&#8377;</span>1300 <span>Per Hour</span></p>
+                <p>For Rent</p>
+                <button onclick="location.href='ord_vehicle_details.php'">Book Now</button>
+            </div>
+        </div>
+    </div>
+    <div class="storage" id="storage">
+        <h1>Storage for Rent</h1>
+        <p style="text-align: center; padding-left: 200px; padding-right: 200px; font-size: 25px; padding-bottom: 25px;">In such an unstable market, storage bins offer farmers flexibility in regard to when and where their crop is marketed.</p>
+        <div class="farm-item">
+            <div class="card">
+                <img src="./Img/st-1.jpg" alt="No-Image">
+                <h1>Small Size</h1>
+                <p class="price"><span>&#8377;</span>12,500 Per Month</p>
+                <p>For Rent</p>
+                <button onclick="location.href='ord_vehicle_details.php'">Book Now</button>
+            </div> 
+            <div class="card">
+                <img src="./Img/st-2.jpg" alt="No-Image">
+                <h1>Medium Size</h1>
+                <p class="price"><span>&#8377;</span>15,500 Per Month</p>
+                <p>For Rent</p>
+                <button onclick="location.href='ord_vehicle_details.php'">Book Now</button>
+            </div> 
+            <div class="card">
+                <img src="./Img/st-3.jpg" alt="No-Image">
+                <h1>Large Size</h1>
+                <p class="price"><span>&#8377;</span>20,000 Per Month</p>
+                <p>For Rent</p>
+                <button onclick="location.href='ord_vehicle_details.php'">Book Now</button>
+            </div> 
+            <div class="card">
+                <img src="./Img/st-4.jpg" alt="No-Image">
+                <h1>Storage with Cooler</h1>
+                <p class="price"><span>&#8377;</span>25,000 Per Month</p>
+                <p>For Rent</p>
+                <button onclick="location.href='ord_vehicle_details.php'">Book Now</button>
+            </div>
+        </div> 
+    </div>
+    <div class="workers" id="workers">
+        <h1>Workers</h1>
+        <p style="text-align: center; padding-left: 200px; padding-right: 200px; font-size: 25px; padding-bottom: 25px;">“Throw yourself into some work you believe in with all you heart, live for it, die for it, and you will find happiness that you had thought could never be yours.”</p>
+        <div class="farm-item">
+            <div class="card">
+                <img src="./Img/male.png" alt="No-Image">
+                <h1>Male Workers</h1>
+                <p class="price"><span>&#8377;</span>500 Per Day</p>
+                <p>For Rent</p>
+                <button onclick="location.href='ord_vehicle_details.php'">Recruit Now</button>
+            </div> 
+            <div class="card">
+                <img src="./Img/female.png" alt="No-Image">
+                <h1>Female Workers</h1>
+                <p class="price"><span>&#8377;</span>500 Per Day</p>
+                <p>For Rent</p>
+                <button onclick="location.href='ord_vehicle_details.php'">Recruit Now</button>
+            </div> 
+        </div> 
+    </div>
+</body>
+</html>

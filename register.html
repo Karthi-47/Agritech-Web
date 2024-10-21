@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            background-color: lightgreen;
+        }
+        .navbar{
+            background-color: teal;
+            color: #fff;
+            height: 36px;
+            width: 100%;
+            padding: 13px;
+            position: sticky;
+            top: 0;
+            text-align: left;
+        }
+        .navbar h1{
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            margin-top: 1px;
+        }
+        .reg{
+            padding-bottom: 10px;
+            padding-top: 10px;
+            padding-left: 20px;
+            margin-top: 100px;
+            width: 800px;
+            margin:0 23%;
+            background-color: rgb(79, 86, 86);
+            border-radius: 20px 20px 20px 20px;
+            box-shadow: 0 0 30px rgba(0,0,5,5);
+        }
+        .reg h2{
+            text-align: center;
+            margin-bottom: 20px;
+            color: white;
+        }
+        .reg label{
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: lightgreen;
+            font-weight: bold;
+            font-size: larger;
+        }
+        .reg input[type="submit"]{
+            margin-top: 20px;
+            margin-left: 23%;
+            width: 55%;
+            background-color: #333;
+            color: #fff;
+            border: 0;
+            cursor: pointer;
+            font-size: medium;
+        }
+        .reg input[type="submit"]:hover{
+            color: black;
+            background-color: lightgreen;
+            transition: 0.4s all ease-in-out;
+            letter-spacing: 2px;
+        }
+        .reg input[type="reset"]:hover{
+            color: white;
+            background-color: rgb(188, 50, 50);
+        }
+        .reg input{
+            font-weight: bold;
+            display: block;
+            width: 95%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .reg .select{
+            border-radius: 5px;
+        }
+        textarea{
+            resize: none;
+            font-size: large;
+            border-radius: 5px;
+        }
+        select{
+            width: 30%;
+            padding: 7px;
+            font-size: 13px;
+        }
+        .reg input[type="reset"]{
+            margin-top: 20px;
+            background-color: white;
+            width: 15%;
+            margin-left: 80%;
+            font-size: 15px;
+        }
+        #username{
+            width: 40%;
+        }
+        .reg button{
+            margin-top: 10px;
+            background-color: white;
+            width: 15%;
+            margin-left: 10%;
+            font-size: 15px;
+            border-radius: 30px;
+            border: 1.5px solid black;
+            padding: 10px;
+        }
+        .reg button[type="button"]{
+            margin-right: 300px;
+        }
+        .reg button:hover{
+            color: white;
+            background-color: lawngreen;
+            font-weight: bold;
+            letter-spacing: 2px;
+            transition:0.4s all ease-in-out;
+        }
+        .reg button:hover[button="reset"]{
+            color: white;
+            background-color: lightgreen;
+            font-weight: bold;
+            letter-spacing: 2px;
+            transition:0.4s all ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <nav>
+            <h1><span style="color: lightgreen;">AGRI</span>&nbsp;&nbsp;TECH</h1>
+        </nav>
+    </div>
+    <!--register.html-->
+    <div class="reg">
+        <script>
+            function validateform(){
+            var username=document.myform.username.value;
+            var usertype=document.myform.usertype.value;
+            var gender=document.myform.gender.value;
+            var email=document.myform.email.value;
+            var phone=document.myform.phone.value;
+            var address=document.myform.address.value;
+            var password=document.myform.password.value;
+            var password2=document.myform.password2.value;
+            if(username==""){
+            alert("Name shouldn't be Empty!!");
+            return false;
+            }
+            else if(usertype==""){
+            alert("Select your Usertype");
+            return false;
+            }
+            else if(gender==""){
+            alert("Select your Gender");
+            return false;
+            }
+            else if(email==""){
+            alert("Enter your Email ID");
+            return false;
+            }
+            else if(phone=="" || phone.length<9){
+            alert("Please Enter phone number correctly");
+            return false;
+            }
+            else if(address==""){
+            alert(" Address shouldn't be Empty!!");
+            return false;
+            }
+            else if(password.length<6){
+            alert("password size should be greater !!");
+            return false;
+            }
+            else if(password2!=passsword){
+            alert("Passwords should be same as entered above:( ");
+            return false;
+            }
+            else {
+            alert("Thank you for registering in our page :) ");
+            }
+            }
+            </script>
+        <form name="myform" method="post" action="registerDB.php" onsubmit="return validateform()">
+            <h2>Registration Details</h2>
+            <div >
+                <label for="username">Name</label>
+            <input type="text" name="name" id="username" placeholder="Enter Your Name"  required>
+            <label name="usertype">User Type</label>
+                <select name="userType">
+                    <option value="select">Select</option>
+                    <option value="customer">Customer</option>
+                    <option value="seller">Seller</option>
+                </select>
+            </div>
+            <label for="gender">Gender</label>
+            <select name="gender">
+                <option value="select">Select</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+            <label for="email">Gmail</label>
+            <input type="email" name="email" id="email" placeholder="Enter Your Email" pattern=".+@gmail\.com" required>
+            <label for="phone">Phone Number</label>
+            <input type="phone" name="phone" id="phone" placeholder="Enter Number" maxlength="10" required>
+            <label for="address">Address</label>
+            <textarea id="address" rows="2" cols="86" name="address" placeholder="Enter Address"></textarea>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" placeholder="Enter Your Password" required>
+            <label for="password2">Confirm Password</label>
+            <input type="password" name="password2" id="password2" placeholder="Confirm Your Password" required>
+            <button type="button" data-inline="true" onclick="location='index.php'">Back</button>
+            <button type="submit" data-inline="true" data-theme="b" name="submit" value="submit">Submit</button>
+        </form>
+    </div>    
+</body>
+</html>
